@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="weather-app">
+
+        <h1>Weather Dashboard</h1>
+
+        <form id="searchForm">
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter city name"
+                autocomplete="off"
+            >
+
+            <button type="submit">Search</button>
+        </form>
+
+        <div id="loading" class="message">
+            Loading...
+        </div>
+
+        <div id="errorMessage" class="message error"></div>
+
+        <section id="weatherContainer" class="weather-container">
+
+            <div class="location">
+                <h2 id="cityName">--</h2>
+                <p id="countryName">--</p>
+            </div>
+
+            <div class="weather-main">
+                <div class="weather-icon" id="weatherIcon">🌤️</div>
+
+                <div>
+                    <div class="temperature">
+                        <span id="temperature">--</span>°C
+                    </div>
+
+                    <p id="weatherDescription">--</p>
+                </div>
+            </div>
+
+            <div class="weather-details">
+
+                <div class="weather-card">
+                    <span class="label">Humidity</span>
+                    <strong>
+                        <span id="humidity">--</span>%
+                    </strong>
+                </div>
+
+                <div class="weather-card">
+                    <span class="label">Wind Speed</span>
+                    <strong>
+                        <span id="windSpeed">--</span> km/h
+                    </strong>
+                </div>
+
+                <div class="weather-card">
+                    <span class="label">Latitude</span>
+                    <strong id="latitude">--</strong>
+                </div>
+
+                <div class="weather-card">
+                    <span class="label">Longitude</span>
+                    <strong id="longitude">--</strong>
+                </div>
+
+            </div>
+
+            <div class="api-info">
+                <p>
+                    Weather data updated for:
+                    <span id="weatherTime">--</span>
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
